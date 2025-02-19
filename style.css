@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" );
+:root{
+    --primary-color: #482c3a;
+    --white-color:#fff;
+    --light-gray-color:#ddd;
+    --blue-color: ;
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing :border-box;
+    font-family: "poppins",sans-serif;
+}
+html{
+    font-size:16px;
+}
+
+.container{
+    max-width :1440px;
+         margin:0 auto;
+         padding: 0 2 rem;
+         width:100%;
+        
+}
+img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+}
+.heading-normal-txt{
+ font-size: 1rem;
+ letter-spacing: 6px;
+ color: var(--primary-color);
+}
+.headings{
+    font-size: 3rem;
+    font-family: "ubuntu";
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+}
+.headings span{
+    color: var(--primary-color);
+}
+.secondary-headings{
+    font-size: 2.5rem;
+    font-family: "ubuntu";
+    padding: 1rem 0;
+}
+.lead{
+    font-size: 1.1rem;
+    line-height: 2;
+    padding: justify;
+}
+.primary-btn{
+    width: 50%;
+    outline:none;
+    background-color: var(--primary-color);
+    border:none;
+    padding:0.7 rem;
+    font-size:1.7rem;
+    border-radius:4px;
+    color:var(--white-color);
+    cursor: pointer;
+}
+header{
+    padding: 1rem 0;
+    background-color: var(--primary-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+}
+.logo img{
+    width: 50px;
+    height:50px;
+    object-fit: cover ;
+    border-radius: 50%;
+
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    
+    
+}
+nav ul{
+    list-style-type:none;
+    display:flex;
+    
+}
+nav ul li{
+    margin: 0 0.9rem;
+    position: relative;
+}
+nav ul li a{
+    color: var(--white-color);
+    font-size: 1.1 rem;
+}
+nav ul li::before{
+    content:"";
+    position:absolute;
+    top:30px;
+    left:0;
+    width:0;
+    height:3px;
+    background: var(--white-color);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+nav ul li:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.swiper{
+    height: inherit;
+}
+.slide-container{
+    width: 100%;
+}
+.slide-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-overlay{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-family: "ubuntu",sans-serif;
+    transform: translate(-50%,-50%);
+    }
+    .img-overlay p{
+        font-size: 1rem;
+        color: var(--white-color);
+       letter-spacing: 8px;
+       animation: animate 4s forwards;
+       transition: all 0.5s ease-in-out;
+
+    }
+    .img-overlay h2{
+        font-size: 5rem;
+        color: var(--white-color);
+       text-transform: uppercase;
+        letter-spacing: 8px;
+        transition: all 0.5s ease-in-out;
+
+    }
+    
+
+    .overlay{
+        position: relative;
+    }
+    .overlay:hover .img-overlay p {
+        letter-spacing: 15px; 
+    }
+    
+    .overlay:hover .img-overlay h2 {
+        font-size: 4rem; 
+    }
+    .overlay ::after{
+        content: "";
+        position:relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        background: rgba(0, 0,0,0.4);
+        }
+        overlay:hover::after {
+            opacity: 1;
+        }
+        @keyframes animate{
+            0%{
+              transform: translate(-50%);
+                opacity: 0;
+
+            }
+           50%{
+            opacity: 0;
+            }
+            70%{
+                opacity: 0.5;
+                }
+                70%{
+                    opacity: 1;
+                    transform: translate(-50%,-50%);
+                    }
+        }
+      
+        #location-search{
+            transform: translateY(-170%);
+        }
+        .form-wrapper{
+            background-color: rgba(0, 0,0,0.6);
+            padding: 2rem;
+            width: 100%;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-control{
+            width: 100%;
+        }
+        form input,select{
+            padding: 0.6rem;
+            outline: none;
+            font-size: 1.1 rem;
+            color: #000;
+            border: 1px solid var(--light-gray-color);
+            margin: 0 0.4rem;
+            border-radius: 4px;
+        }
+        .about-content-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 3rem;
+            margin: 3rem 0;
+        }
+        .about-content-container h2 span{
+            color: var(--primary-color);
+            font-family: "ubuntu",sans-serif;
+        }
+        .about-content-container ul{
+            display: flex;
+            align-items: center;
+        }
+        .about-content-container ul.icons{
+            background: var(--primary-color);
+            padding: 0.8rem;
+            border-radius: 50%;
+            color: var(--white-color);
+        }
+        .about-content-container ul p{
+            margin-left: 1rem;
+        }
+
+      
